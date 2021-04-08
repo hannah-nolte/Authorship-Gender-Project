@@ -1,5 +1,5 @@
 ---
-title: Gender in Plos One Authorshi
+title: Gender in Plos One Authorship
 description: 
 Faith Khumalo (<a href="fmk5@psu.edu">fmk5@psu.edu</a>)
 Sandeep Krisnakumar (<a href="sandeepkrish@psu.edu">sandeepkrish@psu.edu</a>)
