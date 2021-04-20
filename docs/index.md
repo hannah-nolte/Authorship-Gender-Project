@@ -13,6 +13,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 # Data
 
+![](https://www.stm-publishing.com/wp-content/uploads/2020/08/plos.png)
+
 # Methodology
 
 # Results 
