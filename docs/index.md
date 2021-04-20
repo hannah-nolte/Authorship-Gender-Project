@@ -1,4 +1,3 @@
-
 ---
 title: Gender in Plos One Authorship
 
