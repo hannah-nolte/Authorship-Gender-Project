@@ -15,7 +15,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 To get our dataset, we first obtained the XML file from PLOS ONE's website which contains all published papers between 2006 and 2019. Due to the absence of the discipline field in the XML files after 2012, only papers published betweeen 2006 and 2012 were considered.
 
-![](https://github.com/hannah-nolte/Authorship-Gender-Project/blob/main/process%20flowchart.JPG)
+![](https://raw.githubusercontent.com/hannah-nolte/Authorship-Gender-Project/main/process%20flowchart.JPG)
 
 
 # Methodology
