@@ -11,6 +11,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 # Ethics 
 This project has some inherent ethical considerations. Due to the use of an API to estimate the gender of published authors, this project inherently produced a gender dichotomy that is not reflective of the true gender spectrum. The API may also have assigned a gender that misaligns with the authors actual gender identification. Further, to ensure that we were able to retain the maximum number of articles in the dataset, the exclusion criteria was the average probability for each paper, rather than the individual probability for each author. This would have inherently led to predictions with lower probability being included in the dataset when other authors in the same paper had higher associated probabilities. 
+
 Additionally, when estimating nationality, the API may have assigned a country code to an author with which the author does not identify with. This misalignment is exacerbated because the API produced a low accuracy for estimated nationality. Moreover, the API is unable to account for multiple ethnic identities or immigration status when predicting nationality. Lastly, the age predicted by the API is unlikely to match the actual age of the author and the accuracy of the estimates was not provided by the API. Hence, while this information is valuable, limited generalizable conclusions should be drawn from these results, especially for the nationality and age data.
 
 # Data
