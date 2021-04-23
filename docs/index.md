@@ -22,6 +22,9 @@ To get our dataset, we first obtained the XML file from PLOS ONE's website which
 
 
 # Methodology
+Appropriate statistical methods and machine learning techniques were both used to analyze the data of interest. To quantify the gender representation for each paper, we used a metric where each author on a paper is assigned either 0 or 1 based on their gender (male = 0, female = 1). These assigned values were then summed and divided over the total number of authors of the paper.  The abstracts were analyzed using the 2015 version of the Linguistic Inquiry and Word Count software (LIWC; Pennebaker et al., 2015), which is a natural language text processing module. An input text document is read by LIWC and words within the input text are then compared to its validated dictionaries indicating 90 psychometric properties. These variables will be used in later analyses to understand if there is a relationship between psychometric properties of the text and the gender of the authors.
+
+
 
 ![](https://raw.githubusercontent.com/hannah-nolte/Authorship-Gender-Project/main/flowchart.2.jpg)
 
