@@ -23,7 +23,7 @@ To get our dataset, we first obtained the XML file from PLOS ONE's website which
 
 # Methodology
 
-![](https://raw.githubusercontent.com/hannah-nolte/Authorship-Gender-Project/main/process%20flowchart%20v2.JPG)
+![](https://raw.githubusercontent.com/hannah-nolte/Authorship-Gender-Project/main/flowchart.2.jpg)
 
 
 # Results 
