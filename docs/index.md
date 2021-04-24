@@ -16,7 +16,7 @@ Additionally, when estimating nationality, the API may have assigned a country c
 
 # Data
 
-![](https://raw.githubusercontent.com/hannah-nolte/Authorship-Gender-Project/main/paper%20example.PNG)
+![](https://raw.githubusercontent.com/hannah-nolte/Authorship-Gender-Project/main/paper%20example.png)
 
 To get our dataset, we first obtained the XML file from PLOS ONE's website which contains all published papers between 2006 and 2019. Due to the absence of the discipline field in the XML files after 2012, only papers published betweeen 2006 and 2012 were considered
 
