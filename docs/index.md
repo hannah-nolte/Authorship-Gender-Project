@@ -37,6 +37,50 @@ Both appropriate statistical methods and machine learning techniques were used t
 
 # Results 
 
+## Descriptive Statistics
+
+### Male-Female ratio
+abc
+![](https://raw.githubusercontent.com/hannah-nolte/Authorship-Gender-Project/main/Figure%201.png)
+
+### Gender Representation vs Discipline
+
+![](https://raw.githubusercontent.com/hannah-nolte/Authorship-Gender-Project/main/Figure%202.png)
+
+### Unique Country Codes vs Discipline
+
+![](https://raw.githubusercontent.com/hannah-nolte/Authorship-Gender-Project/main/Figure%203.png)
+
+### Average Predicted Age vs Discipline
+
+![](https://raw.githubusercontent.com/hannah-nolte/Authorship-Gender-Project/main/Figure%204.png)
+
+### Range of Predicted Age vs Discipline
+
+![](https://raw.githubusercontent.com/hannah-nolte/Authorship-Gender-Project/main/Figure%205.png)
+
+### Change in Gender Representation Scoe over Time
+
+![](https://raw.githubusercontent.com/hannah-nolte/Authorship-Gender-Project/main/Figure%206.png)
+
+## Clustering Articles based on LIWC Text Modeling
+
+### Dimensionality Reduction using PCA
+
+![](https://raw.githubusercontent.com/hannah-nolte/Authorship-Gender-Project/main/Figure%207.png) 
+
+### Checking Number of Clusters 
+
+![](https://raw.githubusercontent.com/hannah-nolte/Authorship-Gender-Project/main/Figure%208.png)
+
+### Clustering Articles using Reduced Dimension Data
+
+![](https://raw.githubusercontent.com/hannah-nolte/Authorship-Gender-Project/main/Figure%209.png)
+
+## LASSO Regression
+
+![](https://raw.githubusercontent.com/hannah-nolte/Authorship-Gender-Project/main/Figure%2010.png)
+
 # Takeaways
 __A final section summarizes big takeaways in a concise format__
 - Puppies are cute
