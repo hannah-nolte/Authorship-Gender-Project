@@ -41,40 +41,60 @@ Both appropriate statistical methods and machine learning techniques were used t
 ## Descriptive Statistics
 
 ### Male-Female ratio
-abc
+
+The first key result from descriptive statistics was that two-thirds of the authors were estimated to be male (~64%) whereas one-third were estimated to be female (~34%). Moreover, the mean representation score across articles was 0.347 (standard deviation = 0.247).
+
 ![](https://raw.githubusercontent.com/hannah-nolte/Authorship-Gender-Project/main/Figure%201.png)
 
 ### Gender Representation vs Discipline
+
+The second observation from the descriptive statistics was that overall, the mean gender representation scores across disciplines was less than 0.5, indicating that most fields tend to be male dominated. This observation is shown in the figure below. 
 
 ![](https://raw.githubusercontent.com/hannah-nolte/Authorship-Gender-Project/main/Figure%202.png)
 
 ### Unique Country Codes vs Discipline
 
+Third, we compared the % of unique nationalities present in the authors of the papers and observed that overall, on average, all disciplines had approximately 75% unique country codes.Therefore, the authors of a majority of articles were comprised of diversity in terms of their country of origin. 
+
 ![](https://raw.githubusercontent.com/hannah-nolte/Authorship-Gender-Project/main/Figure%203.png)
 
 ### Average Predicted Age vs Discipline
+
+Next, we observe that the average estimated age across articles was 48.813 (SD = 6.345) years. Similarly, the average estimated age for each discipline is observed to be approximately 50 years of age and the average estimated age for a paper is unlikely to be below 30 years or above 65 years. 
 
 ![](https://raw.githubusercontent.com/hannah-nolte/Authorship-Gender-Project/main/Figure%204.png)
 
 ### Range of Predicted Age vs Discipline
 
+The average estimated age range was 29.693 (SD = 11.644) years with the average estimated age range for each discipline being within ±10 years of 30 years which aligns with the total average. 
+
 ![](https://raw.githubusercontent.com/hannah-nolte/Authorship-Gender-Project/main/Figure%205.png)
 
 ### Change in Gender Representation Scoe over Time
+
+Finally, we analyzed how the gender representations scores of accepted papers evolved over the years, specifically between 2006 and 2012. The results revealed that 2008 saw a significant increase in the mean gender representation scores when compared to previous years. While 2009 also saw a similar increase, there was no change between 2009 and 2011. Finally, the gender representation score of 2012 was significantly higher than all the years prior.
 
 ![](https://raw.githubusercontent.com/hannah-nolte/Authorship-Gender-Project/main/Figure%206.png)
 
 ## Clustering Articles based on LIWC Text Modeling
 
+Next, to test if the text analysis data obtained from LIWC could be used to categorize the articles, we performed k-means clustering. Before doing so, the data was normalized and a principal component analysis (PCA) was performed. 
+
 ### Dimensionality Reduction using PCA
+
+First, PCA was performed on the raw LIWC output to reduce the dimensionality of the data. Based on the plot of explained variance ratio to number of components shown below, the first fifteen principal components were used for the k-means clustering.
 
 ![](https://raw.githubusercontent.com/hannah-nolte/Authorship-Gender-Project/main/Figure%207.png) 
 
 ### Checking Number of Clusters 
 
+Next, to choose the appropriate number of clusters, an elbow plot was generated. Based on the plot below, we see that the inertia converges between 15 and 20 clusters, and, therefore, 15 clusters were used for the k-means clustering.
+
 ![](https://raw.githubusercontent.com/hannah-nolte/Authorship-Gender-Project/main/Figure%208.png)
 
 ### Clustering Articles using Reduced Dimension Data
+
+Finally, k-means clustering was performed with 15 clusters. From the results, no visibly identifiable clusters were observed as plotted on two dimensions. This lack of identifiable clusters could be attributed to the multi-dimensional nature of the data. Given that a total of fifteen components were used to cluster the data, there could be some explainable clusters in a higher dimensional space
 
 ![](https://raw.githubusercontent.com/hannah-nolte/Authorship-Gender-Project/main/Figure%209.png)
 
