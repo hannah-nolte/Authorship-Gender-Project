@@ -99,8 +99,8 @@ Finally, k-means clustering was performed with 15 clusters. From the results, no
 
 ## LASSO Regression
 
-![](https://github.com/hannah-nolte/Authorship-Gender-Project/main/Figure%2011.png)
-![](https://github.com/hannah-nolte/Authorship-Gender-Project/main/Figure%2012.png)
+![](https://github.com/hannah-nolte/Authorship-Gender-Project/main/Figure%2011.png?raw=true)
+![](https://github.com/hannah-nolte/Authorship-Gender-Project/main/Figure%2012.png?raw=true)
 
 # Takeaways
 
