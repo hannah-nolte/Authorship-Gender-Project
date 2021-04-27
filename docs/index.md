@@ -6,7 +6,7 @@ description: Faith Khumalo (<a href="fmk5@psu.edu">fmk5@psu.edu</a>), Sandeep Kr
 
 # Why investigate authorship in PLOS ONE?
 
-Current research has identified gender, racial, and geographic biases in academic publishing. The goal of this work is to examine how such biases have shifted over time looking at data from an open source, multidisciplinary journal for the period covering the years 2006-2012. In our analyses, we use demographic characteristics, including gender, nationality, and age to examine disparities in publishing. Investigating authorship in this journal will be informative of whether these biases are being addressed in different fields and in identifying fields that are lagging behind in making publication more equittable across gender, racial, and age groups. The findings in this paper point to publications having become more gender representative over time with future work needed to examine the national and age distributions.
+Current research has identified gender, racial, and geographic biases in academic publishing. The goal of this work is to examine how such biases have shifted over time and across disciplines by looking at data from an open source, multidisciplinary journal for the years 2006-2012. In our analyses, we use estimated demographic characteristics, including gender, nationality, and age to examine disparities in publishing. Investigating authorship in this journal will be informative of whether these biases are being addressed in different fields and help all fields to make publication more equittable across gender, race, and age groups. The findings in this paper point to publications having become more gender representative over time with future work needed to examine the nationality and age distributions.
 
 # Ethics 
 This project has some inherent ethical considerations. Due to the use of an API to estimate the gender of published authors, this project inherently produced a gender dichotomy that is not reflective of the true gender spectrum. The API may also have assigned a gender that misaligns with the authors actual gender identification. Further, to ensure that we were able to retain the maximum number of articles in the dataset, the exclusion criteria was the average probability for each paper, rather than the individual probability for each author. This would have inherently led to predictions with lower probability being included in the dataset when other authors in the same paper had higher associated probabilities. 
@@ -103,8 +103,15 @@ Finally, k-means clustering was performed with 15 clusters. From the results, no
 
 # Takeaways
 
-The results of this work provide further insight into the demographic disparities that exist within the academic community. the findings confirm that a majority of the articles published in PLOS One are predominantly male and likely indicates a gender bias in top-tier academic publishing. In our analysis, we also found that a majority of the articles published in PLOS One are predominantly male which indicates a gender bias in top-tier academic publishing. However, there is also evidence of female authors gaining an increased presence in top-tier academic publishing. While the estimated nationality data has limited accuracy, the findings suggest that nationality diversity in top-tier academic publishing is high. Analysis relating to age suggests that authors publishing in top-tier journals are typically later in their tenure, but there was no estimate of accuracy available for this measure thus future work on age disparities is needed. Given that this work only examined publications in one journal thus producing a limited number of publications per discipline, an extension of this work covering more journals will be informative for separate disciplines.
+The results of this work provide further insight into the demographic disparities that exist within the academic community. 
+
+
+- The findings confirm that a majority of the articles published in PLOS ONE were predominantly estimated as male, which likely indicates a gender bias in top-tier academic publishing. However, there is also evidence of female authors gaining an increased presence in top-tier academic publishing as the representation score increased over time.  
+- While the estimated nationality data has limited accuracy, the findings suggest that nationality diversity in top-tier academic publishing is high. 
+- Analysis relating to age suggests that authors publishing in top-tier journals are typically later in their tenure, but there was no estimate of accuracy available for this measure thus future work on age disparities is needed. 
+
+
+Given that this work only examined publications in one journal thus producing a limited number of publications per discipline, an extension of this work covering more journals will be informative for separate disciplines. Additionally, we would recommend exaiming the accuracy of APIs for estimating demographic data and encourage authors to be cautious when using this methodology. 
 
 # References
-__Don't foget references!__
 1. Pennebaker, J. W., Boyd, R. L., Jordan, K., & Blackburn, K. (2015). The development and psychometric properties of LIWC2015.
