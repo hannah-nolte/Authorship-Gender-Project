@@ -107,12 +107,27 @@ We then proceeded to examine whether the LIWC output variables were predictive o
 ![](https://raw.githubusercontent.com/hannah-nolte/Authorship-Gender-Project/main/Figure%2017.png) 
 ![](https://raw.githubusercontent.com/hannah-nolte/Authorship-Gender-Project/main/Figure%2018.png)
 
+The plots below are for the model including summary variables with the first one showing coefficients from the best model adopted using cross-validation. The first few variables appear to have high coefficient values and they include the four main summary variables - analytics, clout, authentic, and tone. 
+
 ![](https://raw.githubusercontent.com/hannah-nolte/Authorship-Gender-Project/main/Figure%2011.png)
+
+This next plot shows the performance of the regression in predicting gender representation of the training data of this dataset with the one below showing the prediction using test data. The top plot shows that the model does better on the training data with the next one showing that predictions on the test data are also well-placed.
+
 ![](https://raw.githubusercontent.com/hannah-nolte/Authorship-Gender-Project/main/Figure%2015.png)
+
 ![](https://raw.githubusercontent.com/hannah-nolte/Authorship-Gender-Project/main/Figure%2016.png)
+
+We then repeated the process above having dropped the summary variables from the dataset with resulting coefficients being in the lower range.
+
 ![](https://raw.githubusercontent.com/hannah-nolte/Authorship-Gender-Project/main/Figure%2012.png)
+
+The plots below also represent the prediction performance of the model on training and testing data. Again, the model performs better on the training data given its size, but it also does well on predicting the gender representation scores using the test data.
+
 ![](https://raw.githubusercontent.com/hannah-nolte/Authorship-Gender-Project/main/Figure%2013.png)
+
 ![](https://raw.githubusercontent.com/hannah-nolte/Authorship-Gender-Project/main/Figure%2014.png)
+
+The model including all features has an r-squared value of 0.99 on predictions using the training data along with a mean squared error (MSE) of 0.002. On the test data, the model outputs an r-squared value of 0.98 and an MSE value of 0.011. With summary variables dropped, the model's r-squared value based on training data data is 0.99 with an MSE of 0.00018. On testing data, the r-squared value is 0.97 with an MSE of 0.003. Overall, dropping the summary variables appears to improve the models' predictive performance.
 
 # Takeaways
 
