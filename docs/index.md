@@ -101,6 +101,8 @@ Finally, k-means clustering was performed with 15 clusters. From the results, no
 
 ![](https://raw.githubusercontent.com/hannah-nolte/Authorship-Gender-Project/main/Figure%2011.png)
 ![](https://raw.githubusercontent.com/hannah-nolte/Authorship-Gender-Project/main/Figure%2012.png)
+![](https://raw.githubusercontent.com/hannah-nolte/Authorship-Gender-Project/blob/main/Figure%2013.png)
+![](https://raw.githubusercontent.com/hannah-nolte/Authorship-Gender-Project/blob/main/Figure%2014.png)
 
 # Takeaways
 
