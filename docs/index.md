@@ -129,7 +129,7 @@ The plots below also represent the prediction performance of the model on traini
 
 ![](https://raw.githubusercontent.com/hannah-nolte/Authorship-Gender-Project/main/Figure%2014.png)
 
-The model including all features has an r-squared value of 0.99 on predictions using the training data along with a mean squared error (MSE) of 0.002. On the test data, the model outputs an r-squared value of 0.98 and an MSE value of 0.011. With summary variables dropped, the model's r-squared value based on training data data is 0.99 with an MSE of 0.00018. On testing data, the r-squared value is 0.97 with an MSE of 0.003. Overall, dropping the summary variables appears to improve the models' predictive performance.
+The model including all features has an r-squared value of 0.99 on predictions using the training data along with a mean squared error (MSE) of 0.002. On the test data, the model outputs an r-squared value of 0.98 and an MSE value of 0.011. With summary variables dropped, the model's r-squared value based on training data is 0.99 with an MSE of 0.00018. On testing data, the r-squared value is 0.97 with an MSE of 0.003. Overall, dropping the summary variables appears to improve the models' predictive performance.
 
 # Takeaways
 
