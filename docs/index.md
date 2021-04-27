@@ -102,7 +102,9 @@ Finally, k-means clustering was performed with 15 clusters. From the results, no
 
 ## LASSO Regression
 
-We then proceeded to examine whether the LIWC output variables were predictive of gender representation using Lasso regression, a regularization technique used to overcome overfitting in a regression model. 
+We then proceeded to examine whether the LIWC output variables were predictive of gender representation using Lasso regression, a regularization technique used to overcome overfitting in a regression model. This regression is designed for models with features showing high levels of multicollinearity as it performs feature selection. We ran two lasso regressions, with one inclusive of the summary variables and the other without these variables.
+
+![](https://raw.githubusercontent.com/hannah-nolte/Authorship-Gender-Project/blob/main/Figure%2017.png) ![](https://raw.githubusercontent.com/hannah-nolte/Authorship-Gender-Project/blob/main/Figure%2018.png)
 
 ![](https://raw.githubusercontent.com/hannah-nolte/Authorship-Gender-Project/main/Figure%2011.png)
 ![](https://raw.githubusercontent.com/hannah-nolte/Authorship-Gender-Project/main/Figure%2015.png)
