@@ -102,7 +102,7 @@ Finally, k-means clustering was performed with 15 clusters. From the results, no
 
 ## LASSO Regression
 
-We then proceeded to examine whether the LIWC output variables were predictive of gender representation using Lasso regression, a regularization technique used to overcome overfitting in a regression model. This regression is designed for models with features showing high levels of multicollinearity as it performs feature selection. We ran two lasso regressions, with one inclusive of the summary variables and the other without these variables.
+We then proceeded to examine whether the LIWC output variables were predictive of gender representation using Lasso regression, a regularization technique used to overcome overfitting in a regression model. This regression is designed for models with features showing high levels of multicollinearity as it performs feature selection. We ran two lasso regressions, with one inclusive of the summary variables and the other without these variables. We used the variance inflation factor (VIF)to detect multicollinearity in the LIWC variables, which measures the correlation and strength of correlation between the explanatory variables. The output below shows the mean VIF across features in the two regressions and is indicative of high multicollinearity among the features in both given that VIF values greater than 5 are indicative of potentially severe correlation between a given feature and other variables in the model. In such an instance, the coefficient estimates and p-values are likely unreliable which is why we resorted to using the Lasso.
 
 ![](https://raw.githubusercontent.com/hannah-nolte/Authorship-Gender-Project/main/Figure%2017.png) 
 ![](https://raw.githubusercontent.com/hannah-nolte/Authorship-Gender-Project/main/Figure%2018.png)
@@ -128,3 +128,4 @@ Given that this work only examined publications in one journal thus producing a 
 
 # References
 1. Pennebaker, J. W., Boyd, R. L., Jordan, K., & Blackburn, K. (2015). The development and psychometric properties of LIWC2015.
+2. https://www.statology.org/how-to-calculate-vif-in-python/
