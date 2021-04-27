@@ -6,7 +6,7 @@ description: Faith Khumalo (<a href="fmk5@psu.edu">fmk5@psu.edu</a>), Sandeep Kr
 
 # Why investigate authorship in PLOS ONE?
 
-Current research has identified gender, racial, and geographic biases in academic publishing. The goal of this work is to examine how such biases have shifted over time and across disciplines by looking at data from an open source, multidisciplinary journal for the years 2006-2012. In our analyses, we use estimated demographic characteristics, including gender, nationality, and age to examine disparities in publishing. Investigating authorship in this journal will be informative of whether these biases are being addressed in different fields and help all fields to make publication more equittable across gender, race, and age groups. The findings in this paper point to publications having become more gender representative over time with future work needed to examine the nationality and age distributions.
+Current research has identified gender, racial, and geographic biases in academic publishing. The goal of this work is to examine how such biases have shifted over time and across disciplines by looking at data from an open source, multidisciplinary journal for the years 2006-2012. In our analyses, we use estimated demographic characteristics, including gender, nationality, and age to examine disparities in publishing. Investigating authorship in this journal will be informative of whether these biases are being addressed in different fields and help all fields to make publication more equitable across gender, race, and age groups. The findings in this paper point to publications having become more gender representative over time with future work needed to examine the nationality and age distributions.
 
 # Ethics 
 
@@ -16,11 +16,11 @@ Additionally, when estimating nationality, the API may have assigned a country c
 
 # Data
 
-To get our dataset, we first obtained the XML file from PLOS ONE's website which contains all published papers between 2006 and 2019. From each XML file, we scraped the title, author names, abtsract, important dates (received, accepted, and publication dates), and the discipline, as seen in the image below. Not pictured in the image is the discipline. We scraped these variables specifically as these were the most relevant to achieveing the goal of our project. 
+To get our dataset, we first obtained the XML file from PLOS ONE's website which contains all published papers between 2006 and 2019. From each XML file, we scraped the title, author names, abstract, important dates (received, accepted, and publication dates), and the discipline, as seen in the image below. Not pictured in the image is the discipline. We scraped these variables specifically as these were the most relevant to achieveing the goal of our project. 
 
 ![](https://raw.githubusercontent.com/hannah-nolte/Authorship-Gender-Project/main/paper%20example.png)
 
-Due to the absence of the discipline field in the XML files after 2012, only papers published betweeen 2006 and 2012 were considered. To preidct the names, genders, and ages of each author, three APIs were used - Genderize.io, Nationalize.io, and Agify.io. Both Genderize.io and Nationalize.io yield the predicted gender and nationality of a person respecitively using their first name and yield the associated probability of the prediction. Agify.io does not yield a probability and instead provides a count, and was hence not used in the data analysis. The average probability for the predicted nationalities was only 0.37, and was hence not used. Hence, only the predicted genders were used for the analysis. To remove predictions with low probability while also retaining as much data as possible, we removed papers that had an average probability (or acccuracy) less than 0.85. This yielded 35165 papers that formed our data of interest.
+Due to the absence of the discipline field in the XML files after 2012, only papers published betweeen 2006 and 2012 were considered. To predict the gender, nationality, and age of each author, three APIs were used - Genderize.io, Nationalize.io, and Agify.io. Both Genderize.io and Nationalize.io yield the predicted gender and nationality of a person respecitively using their first name and yield the associated probability of the prediction. Agify.io does not yield a probability and instead provides a count. The average probability for the predicted nationalities was only 0.37. Hence, the primary analyses for this project relied on predicted gender. To remove predictions with low probability while also retaining as much data as possible, we removed papers that had an average probability (or acccuracy) less than 0.85. This yielded 35165 papers that formed our data of interest.
 
 ![](https://raw.githubusercontent.com/hannah-nolte/Authorship-Gender-Project/main/process%20flowchart%20v2.JPG)
 
@@ -28,7 +28,7 @@ Due to the absence of the discipline field in the XML files after 2012, only pap
 # Methodology
 
 Both appropriate statistical methods and machine learning techniques were used to analyze the data of interest. 
-- To quantify the gender representation for each paper, a metric where each author on a paper is assigned either 0 or 1 based on their gender (male = 0, female = 1) was used. These assigned values were then summed and divided over the total number of authors of the paper.  
+- To quantify the gender representation for each paper, a metric where each author on a paper is assigned either 0 or 1 based on their estimated gender (male = 0, female = 1) was used. These assigned values were then summed and divided over the total number of authors of the paper.  
 - The abstracts were analyzed using the 2015 version of the Linguistic Inquiry and Word Count software (LIWC; Pennebaker et al., 2015), which is a natural language text processing module. Words within the input text document are compared to LIWC's validated dictionaries indicating ~90 psychometric properties. 
 - Principal Component Analysis (PCA) was used to test if the high dimensional output generated by LIWC could be represented using an underlying set of components. 
 - K-means clustering using the PCA components was used to determine if the articles could be classified into certain clusters. These clusters could then be compared to the demographic variables such as gender and ethnicity representation scores to investigate if demographic composition of authors influenced their writing style.
@@ -44,7 +44,7 @@ Both appropriate statistical methods and machine learning techniques were used t
 
 ### Male-Female ratio
 
-The first key result from descriptive statistics was that two-thirds of the authors were estimated to be male (~64%) whereas one-third were estimated to be female (~34%). Moreover, the mean representation score across articles was 0.347 (standard deviation = 0.247).
+The first key result from descriptive statistics was that two-thirds of the authors were estimated to be male (~64%), whereas one-third were estimated to be female (~34%). Moreover, the mean representation score across articles was 0.347 (standard deviation = 0.247).
 
 ![](https://raw.githubusercontent.com/hannah-nolte/Authorship-Gender-Project/main/Figure%201.png)
 
@@ -56,13 +56,13 @@ The second observation from the descriptive statistics was that overall, the mea
 
 ### Unique Country Codes vs Discipline
 
-Third, we compared the % of unique nationalities present in the authors of the papers and observed that overall, on average, all disciplines had approximately 75% unique country codes.Therefore, the authors of a majority of articles were comprised of diversity in terms of their country of origin. 
+Third, we compared the percent of unique nationalities present in the authors of the papers and observed that overall, on average, all disciplines had approximately 75% unique country codes. Therefore, the authors of a majority of articles were comprised of diversity in terms of their country of origin. 
 
 ![](https://raw.githubusercontent.com/hannah-nolte/Authorship-Gender-Project/main/Figure%203.png)
 
 ### Average Predicted Age vs Discipline
 
-Next, we observe that the average estimated age across articles was 48.813 (SD = 6.345) years. Similarly, the average estimated age for each discipline is observed to be approximately 50 years of age and the average estimated age for a paper is unlikely to be below 30 years or above 65 years. 
+Next, we observed that the average estimated age across articles was 48.813 (SD = 6.345) years. Similarly, the average estimated age for each discipline is observed to be approximately 50 years of age and the average estimated age for a paper is unlikely to be below 30 years or above 65 years. 
 
 ![](https://raw.githubusercontent.com/hannah-nolte/Authorship-Gender-Project/main/Figure%204.png)
 
@@ -80,7 +80,7 @@ Finally, we analyzed how the gender representations scores of accepted papers ev
 
 ## Clustering Articles based on LIWC Text Modeling
 
-Next, to test if the text analysis data obtained from LIWC could be used to categorize the articles, we performed k-means clustering. Before doing so, the data was normalized and a principal component analysis (PCA) was performed. 
+Next, to test if the text analysis results obtained from LIWC could be used to categorize the articles, we performed k-means clustering. Before doing so, the data was normalized and a principal component analysis (PCA) was performed. 
 
 ### Dimensionality Reduction using PCA
 
@@ -102,9 +102,11 @@ Finally, k-means clustering was performed with 15 clusters. From the results, no
 
 ## LASSO Regression
 
-We then proceeded to examine whether the LIWC output variables were predictive of gender representation using Lasso regression, a regularization technique used to overcome overfitting in a regression model. This regression is designed for models with features showing high levels of multicollinearity as it performs feature selection. We ran two lasso regressions, with one inclusive of the summary variables and the other without these variables. We used the variance inflation factor (VIF)to detect multicollinearity in the LIWC variables, which measures the correlation and strength of correlation between the explanatory variables. The output below shows the mean VIF across features in the two regressions and is indicative of high multicollinearity among the features in both given that VIF values greater than 5 are indicative of potentially severe correlation between a given feature and other variables in the model. In such an instance, the coefficient estimates and p-values are likely unreliable which is why we resorted to using the Lasso.
+We then proceeded to examine whether the LIWC output variables were predictive of gender representation using Lasso regression. This regression is designed for models with features showing high levels of multicollinearity as it performs feature selection. We ran two lasso regressions, one with the summary variables included and the other without these variables. We used the variance inflation factor (VIF) to detect multicollinearity in the LIWC variables, which measures the correlation and strength of correlation between the explanatory variables. The output below shows the mean VIF across features in the two regressions and is indicative of high multicollinearity among the features in both as VIF values greater than 5 are indicative of potentially severe correlation between a given feature and other variables in the model. In such an instance, the coefficient estimates and p-values are likely unreliable which is why we used a Lasso regression.
 
 ![](https://raw.githubusercontent.com/hannah-nolte/Authorship-Gender-Project/main/Figure%2017.png) 
+
+
 ![](https://raw.githubusercontent.com/hannah-nolte/Authorship-Gender-Project/main/Figure%2018.png)
 
 The plots below are for the model including summary variables with the first one showing coefficients from the best model adopted using cross-validation. The first few variables appear to have high coefficient values and they include the four main summary variables - analytics, clout, authentic, and tone. 
