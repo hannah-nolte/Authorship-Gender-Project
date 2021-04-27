@@ -9,11 +9,13 @@ description: Faith Khumalo (<a href="fmk5@psu.edu">fmk5@psu.edu</a>), Sandeep Kr
 Current research has identified gender, racial, and geographic biases in academic publishing. The goal of this work is to examine how such biases have shifted over time and across disciplines by looking at data from an open source, multidisciplinary journal for the years 2006-2012. In our analyses, we use estimated demographic characteristics, including gender, nationality, and age to examine disparities in publishing. Investigating authorship in this journal will be informative of whether these biases are being addressed in different fields and help all fields to make publication more equittable across gender, race, and age groups. The findings in this paper point to publications having become more gender representative over time with future work needed to examine the nationality and age distributions.
 
 # Ethics 
+
 This project has some inherent ethical considerations. Due to the use of an API to estimate the gender of published authors, this project inherently produced a gender dichotomy that is not reflective of the true gender spectrum. The API may also have assigned a gender that misaligns with the authors actual gender identification. Further, to ensure that we were able to retain the maximum number of articles in the dataset, the exclusion criteria was the average probability for each paper, rather than the individual probability for each author. This would have inherently led to predictions with lower probability being included in the dataset when other authors in the same paper had higher associated probabilities. 
 
 Additionally, when estimating nationality, the API may have assigned a country code to an author with which the author does not identify with. This misalignment is exacerbated because the API produced a low accuracy for estimated nationality. Moreover, the API is unable to account for multiple ethnic identities or immigration status when predicting nationality. Lastly, the age predicted by the API is unlikely to match the actual age of the author and the accuracy of the estimates was not provided by the API. Hence, while this information is valuable, limited generalizable conclusions should be drawn from these results, especially for the nationality and age data.
 
 # Data
+
 To get our dataset, we first obtained the XML file from PLOS ONE's website which contains all published papers between 2006 and 2019. From each XML file, we scraped the title, author names, abtsract, important dates (received, accepted, and publication dates), and the discipline, as seen in the image below. Not pictured in the image is the discipline. We scraped these variables specifically as these were the most relevant to achieveing the goal of our project. 
 
 ![](https://raw.githubusercontent.com/hannah-nolte/Authorship-Gender-Project/main/paper%20example.png)
@@ -24,6 +26,7 @@ Due to the absence of the discipline field in the XML files after 2012, only pap
 
 
 # Methodology
+
 Both appropriate statistical methods and machine learning techniques were used to analyze the data of interest. 
 - To quantify the gender representation for each paper, a metric where each author on a paper is assigned either 0 or 1 based on their gender (male = 0, female = 1) was used. These assigned values were then summed and divided over the total number of authors of the paper.  
 - The abstracts were analyzed using the 2015 version of the Linguistic Inquiry and Word Count software (LIWC; Pennebaker et al., 2015), which is a natural language text processing module. Words within the input text document are compared to LIWC's validated dictionaries indicating ~90 psychometric properties. 
@@ -98,6 +101,8 @@ Finally, k-means clustering was performed with 15 clusters. From the results, no
 ![](https://raw.githubusercontent.com/hannah-nolte/Authorship-Gender-Project/main/Figure%209.png)
 
 ## LASSO Regression
+
+We then proceeded to examine whether the LIWC output variables were predictive of gender representation using Lasso regression, a regularization technique used to overcome overfitting in a regression model. 
 
 ![](https://raw.githubusercontent.com/hannah-nolte/Authorship-Gender-Project/main/Figure%2011.png)
 ![](https://raw.githubusercontent.com/hannah-nolte/Authorship-Gender-Project/main/Figure%2015.png)
